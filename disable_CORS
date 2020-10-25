@@ -1,0 +1,16 @@
+<!-- conf/web.xml -->
+<filter>
+    <filter-name>CorsFilter</filter-name>
+    <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+    <async-supported>true</async-supported>
+    <init-param>
+        <param-name>cors.support.credentials</param-name>
+        <param-value>true</param-value> </init-param>
+    <init-param> <param-name>cors.allowed.origins</param-name>
+        <param-value>http://elodc</param-value> <!-- domain sipemanggil -->
+    </init-param>
+</filter>
+<filter-mapping>
+    <filter-name>CorsFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
